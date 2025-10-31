@@ -1,0 +1,153 @@
+<header class="bg-white shadow-sm sticky top-0 z-50 transition-all duration-300">
+  <div class="container mx-auto px-4">
+    <div class="flex items-center justify-between py-4">
+      <!-- Logo -->
+      <div class="flex items-center" data-aos="fade-right">
+        <a href="/" class="flex items-center group">
+          <img src="assets/images/logo.png" alt="Macedon Ranges Produce Store" class="h-12 w-auto">
+          <span class="ml-3 text-xl font-bold text-gray-800 hidden sm:block group-hover:text-primary-500 transition-colors">Macedon Ranges Produce</span>
+        </a>
+      </div>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden lg:flex items-center space-x-8" data-aos="fade-down">
+        <a href="/" class="text-gray-700 hover:text-primary-500 font-medium transition-colors relative group py-2">
+          Home
+          <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary-500 group-hover:w-full transition-all duration-300"></span>
+        </a>
+        <a href="/shop" class="text-gray-700 hover:text-primary-500 font-medium transition-colors relative group py-2">
+          Shop
+          <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary-500 group-hover:w-full transition-all duration-300"></span>
+        </a>
+        <a href="/producers" class="text-gray-700 hover:text-primary-500 font-medium transition-colors relative group py-2">
+          Our Producers
+          <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary-500 group-hover:w-full transition-all duration-300"></span>
+        </a>
+        <a href="/about" class="text-gray-700 hover:text-primary-500 font-medium transition-colors relative group py-2">
+          About
+          <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary-500 group-hover:w-full transition-all duration-300"></span>
+        </a>
+        <a href="/contact" class="text-gray-700 hover:text-primary-500 font-medium transition-colors relative group py-2">
+          Contact
+          <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary-500 group-hover:w-full transition-all duration-300"></span>
+        </a>
+      </nav>
+
+      <!-- Search, Cart, and Profile -->
+      <div class="flex items-center space-x-2" data-aos="fade-left">
+        <!-- Search -->
+        <div class="hidden md:flex items-center bg-gray-50 rounded-full px-4 py-2.5 hover:bg-gray-100 transition-colors border border-transparent hover:border-gray-200">
+          <input type="text" placeholder="Search products..." class="bg-transparent outline-none w-40 text-sm text-gray-700 placeholder-gray-400">
+          <svg class="w-4 h-4 text-gray-400 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+          </svg>
+        </div>
+
+        <!-- Cart -->
+        <button class="relative p-2.5 text-gray-600 hover:text-primary-500 hover:bg-primary-50 rounded-full transition-all group">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
+          </svg>
+          <span id="cart-count" class="absolute -top-1 -right-1 bg-primary-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center font-semibold shadow-lg hidden">0</span>
+        </button>
+
+        <!-- Profile Dropdown -->
+        <div class="relative profile-dropdown">
+          <button id="profile-button" class="flex items-center space-x-2 p-2.5 text-gray-600 hover:text-primary-500 hover:bg-primary-50 rounded-full transition-all group">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+            </svg>
+          </button>
+
+          <!-- Dropdown Menu -->
+          <div id="profile-menu" class="hidden absolute right-0 mt-2 w-56 bg-white rounded-xl shadow-xl border border-gray-100 py-2 animate-fade-in">
+            <div class="px-4 py-3 border-b border-gray-100">
+              <p class="text-sm font-semibold text-gray-800">Hello, Guest</p>
+              <p class="text-xs text-gray-500 mt-0.5">Manage your account</p>
+            </div>
+            <a href="/account" class="flex items-center space-x-3 px-4 py-2.5 text-gray-700 hover:bg-primary-50 hover:text-primary-600 transition-colors">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+              </svg>
+              <span class="text-sm font-medium">My Account</span>
+            </a>
+            <a href="/orders" class="flex items-center space-x-3 px-4 py-2.5 text-gray-700 hover:bg-primary-50 hover:text-primary-600 transition-colors">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+              </svg>
+              <span class="text-sm font-medium">My Orders</span>
+            </a>
+            <a href="/wishlist" class="flex items-center space-x-3 px-4 py-2.5 text-gray-700 hover:bg-primary-50 hover:text-primary-600 transition-colors">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+              </svg>
+              <span class="text-sm font-medium">Wishlist</span>
+            </a>
+            <a href="/settings" class="flex items-center space-x-3 px-4 py-2.5 text-gray-700 hover:bg-primary-50 hover:text-primary-600 transition-colors">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+              </svg>
+              <span class="text-sm font-medium">Settings</span>
+            </a>
+            <div class="border-t border-gray-100 mt-2"></div>
+            <a href="/logout" class="flex items-center space-x-3 px-4 py-2.5 text-red-600 hover:bg-red-50 transition-colors">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path>
+              </svg>
+              <span class="text-sm font-medium">Logout</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-button" class="lg:hidden p-2.5 text-gray-600 hover:text-primary-500 hover:bg-primary-50 rounded-full transition-all">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="lg:hidden hidden border-t py-4 animate-slide-up">
+      <div class="flex flex-col space-y-3">
+        <a href="/" class="text-gray-700 hover:text-primary-500 hover:bg-primary-50 font-medium px-4 py-2.5 rounded-lg transition-colors">Home</a>
+        <a href="/shop" class="text-gray-700 hover:text-primary-500 hover:bg-primary-50 font-medium px-4 py-2.5 rounded-lg transition-colors">Shop</a>
+        <a href="/producers" class="text-gray-700 hover:text-primary-500 hover:bg-primary-50 font-medium px-4 py-2.5 rounded-lg transition-colors">Our Producers</a>
+        <a href="/about" class="text-gray-700 hover:text-primary-500 hover:bg-primary-50 font-medium px-4 py-2.5 rounded-lg transition-colors">About</a>
+        <a href="/contact" class="text-gray-700 hover:text-primary-500 hover:bg-primary-50 font-medium px-4 py-2.5 rounded-lg transition-colors">Contact</a>
+        <div class="pt-3 border-t">
+          <input type="text" placeholder="Search products..." class="w-full bg-gray-50 rounded-lg px-4 py-2.5 text-sm outline-none focus:ring-2 focus:ring-primary-500 transition-all">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript for dropdowns -->
+  <script>
+    // Profile dropdown toggle
+    const profileButton = document.getElementById('profile-button');
+    const profileMenu = document.getElementById('profile-menu');
+    
+    profileButton?.addEventListener('click', (e) => {
+      e.stopPropagation();
+      profileMenu.classList.toggle('hidden');
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!profileMenu?.contains(e.target) && !profileButton?.contains(e.target)) {
+        profileMenu?.classList.add('hidden');
+      }
+    });
+
+    // Mobile menu toggle
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    mobileMenuButton?.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+</header>

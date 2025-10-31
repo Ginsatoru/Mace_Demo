@@ -1,0 +1,14 @@
+{
+  "name": "macedon-ranges-produce-store",
+  "version": "1.0.0",
+  "description": "Modern eCommerce website for Macedon Ranges Produce Store",
+  "main": "index.html",
+  "scripts": {
+    "build": "tailwindcss -i ./assets/css/style.css -o ./dist/output.css --watch",
+    "dev": "tailwindcss -i ./assets/css/style.css -o ./dist/output.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.3.0",
+    "aos": "^2.3.4"
+  }
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Macedon Ranges Produce Store - Fresh Local Produce</title>
+    <meta name="description" content="Discover fresh, locally sourced produce from Macedon Ranges. Supporting local farmers with quality fruits, vegetables, and artisanal products delivered to your door.">
+    
+    <!-- Tailwind CSS -->
+    <link href="./dist/output.css" rel="stylesheet">
+    
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="font-sans antialiased">
+    <!-- Header -->
+    <div data-include="sections/header.html"></div>
+
+    <!-- Hero Banner -->
+    <div data-include="sections/hero-banner.html"></div>
+
+    <!-- Featured Products -->
+    <div data-include="sections/featured-products.html"></div>
+
+    <!-- Product Categories -->
+    <div data-include="sections/product-categories.html"></div>
+
+    <!-- Deals & Offers -->
+    <div data-include="sections/deals-offers.html"></div>
+
+    <!-- Testimonials -->
+    <div data-include="sections/testimonials.html"></div>
+
+    <!-- Blog Preview -->
+    <div data-include="sections/blog-preview.html"></div>
+
+    <!-- Newsletter Signup -->
+    <div data-include="sections/newsletter-signup.html"></div>
+
+    <!-- Footer -->
+    <div data-include="sections/footer.html"></div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="assets/js/main.js"></script>
+    
+    <script>
+        // Simple include function for development
+        document.addEventListener('DOMContentLoaded', function() {
+            const includes = document.querySelectorAll('[data-include]');
+            includes.forEach(async include => {
+                const file = include.getAttribute('data-include');
+                try {
+                    const response = await fetch(file);
+                    const html = await response.text();
+                    include.outerHTML = html;
+                } catch (error) {
+                    console.error('Error loading include:', error);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
