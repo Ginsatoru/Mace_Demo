@@ -4,11 +4,13 @@
   "description": "Modern eCommerce website for Macedon Ranges Produce Store",
   "main": "index.html",
   "scripts": {
-    "build": "tailwindcss -i ./assets/css/style.css -o ./dist/output.css --watch",
-    "dev": "tailwindcss -i ./assets/css/style.css -o ./dist/output.css --watch"
+    "build": "npx tailwindcss -i ./assets/css/style.css -o ./assets/css/output.css --minify",
+    "dev": "npx tailwindcss -i ./assets/css/style.css -o ./assets/css/output.css --watch"
   },
   "devDependencies": {
     "tailwindcss": "^3.3.0",
-    "aos": "^2.3.4"
+    "aos": "^2.3.4",
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.4.0"
   }
 }
